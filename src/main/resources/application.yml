@@ -1,0 +1,38 @@
+server:
+  port: 80
+  error:
+    include-message: never
+spring:
+  sql:
+    init:
+      mode: always
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: zzqxmcfbrhtmwu
+    password: c02df420f6c0df0bfc06371b36dfc37486397c575daa38126251894b03dd91f4
+    url: jdbc:postgresql://ec2-52-72-99-110.compute-1.amazonaws.com:5432/d14658e38tvlc4
+  servlet:
+    multipart:
+      max-file-size: 99MB
+      max-request-size: 9999MB
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: 889244007155-kvr17tf7u41929ton8eg2ks9275ttrua.apps.googleusercontent.com
+            clientSecret: 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
+
+
+jwt:
+  secretKey: SupperKey
+  expireTime: 86400000
+#purge:
+#cron: expression=0 0 5 * * ?
+
+
+
